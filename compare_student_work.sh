@@ -1,6 +1,7 @@
 #!/bin/sh
 
-python extract_files.py student_files output
+# include the student files directory as second argument
+python extract_files.py $2 output
 
 mkdir py_
 
@@ -11,14 +12,16 @@ mv *.py ../py_
 
 cd ..
 
-python filter_full_files.py base.py student_comparison
+# include the first argument as the base file for comparision
+COMPARISON_FILES=student_comparison_$2
+python filter_full_files.py $1 "$COMPARISON_FILES"
 
 rm -rf output
 rm -rf py_
 
-mv moss ./student_comparison
+mv moss ./$COMPARISON_FILES
 
-cd student_comparison
+cd $COMPARISON_FILES 
 
 ./moss -l python *.py
 
