@@ -19,5 +19,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+# output dir is an internal directory for managing converstion from notebook to .py
     build_output_dir(args.output_dir)
     main(args.source_dir, args.output_dir)
