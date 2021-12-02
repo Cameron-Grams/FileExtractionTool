@@ -1,5 +1,7 @@
 *.swp
 __pycache__
-base_to_compare.py
+
+ex_*
 moss
 assignment*
+student_comparison*

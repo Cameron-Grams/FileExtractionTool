@@ -1,4 +1,5 @@
 #!/bin/sh
+# call this script with: ./compare_student_work.sh <name of base file> <name of directory with the student files>
 
 # include the student files directory as second argument
 python extract_files.py $2 output
