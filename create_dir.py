@@ -1,8 +1,6 @@
 import os
 
-
-
-def build_output_dir(output_dir):
+def create_dir(output_dir):
     try:
         os.mkdir(output_dir)
     except FileExistsError as exec:

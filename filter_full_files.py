@@ -2,7 +2,7 @@ import os
 import shutil
 import argparse
 
-from output_dir import build_output_dir
+from create_dir import create_dir
 from clean_file import clean_file
 
 def filter_student_files(output_compare, base):
@@ -24,5 +24,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    build_output_dir(args.output_dir)
+    create_dir(args.output_dir)
     filter_student_files(args.output_dir, args.base)
